@@ -1,9 +1,9 @@
 <template>
   <div class="flex h-screen w-screen">
-    <div class="md:w-64 bg-gray-100">
+    <div class="md:w-64 bg-white shadow sticky top-0">
       <Sidebar />
     </div>
-    <div class="flex-1">
+    <div class="flex-1 overflow-auto">
       <Content />
     </div>
   </div>

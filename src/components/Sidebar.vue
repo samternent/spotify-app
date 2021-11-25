@@ -1,6 +1,8 @@
 <template>
-  <div class="h-full flex flex-col justify-between">
-    Sidebar
+  <div class="h-full flex flex-col justify-between ">
+    <div>
+      Recently Played Artists
+    </div>
     <button
       v-if="!user"
       @click="authenticate"

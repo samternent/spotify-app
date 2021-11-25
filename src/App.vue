@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-screen w-screen">
-    <div class="md:w-1/4 bg-gray-100">
+    <div class="md:w-64 bg-gray-100">
       <Sidebar />
     </div>
     <div class="flex-1">
@@ -10,14 +10,23 @@
 </template>
 
 <script>
+import { provide } from 'vue';
+
 import Sidebar from './components/Sidebar.vue';
 import Content from './components/Content.vue';
+
+import useSpotifyApi from './composables/useSpotifyApi';
 
 export default {
   name: 'App',
   components: {
     Sidebar,
     Content,
+  },
+  setup() {
+    const spotifyApi = useSpotifyApi();
+
+    provide('spotifyApi', spotifyApi);
   },
 };
 

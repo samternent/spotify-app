@@ -1,16 +1,22 @@
 <template>
-  <div class="h-full flex flex-col justify-between ">
-    <div>
+  <div class="h-full flex flex-col justify-between max-h-screen">
+    <p class="text-xl my-2 text-center">
       Recently Played Artists
-    </div>
-    <button
-      v-if="!user"
-      @click="authenticate"
-      class="text-white bg-green-600 px-4 py-4 rounded m-4"
-    >
-      Connect with Spotify
-    </button>
-    <div v-else class="m-4 text-center">
+    </p>
+    <ul class="flex-1 overflow-auto py-2 px-4">
+      <li
+        v-for="item in recentlyPlayedArtists"
+        :key="item.id"
+      >
+        <button
+          class="bg-gray-50 py-1 px-4 my-1 rounded-full"
+          @click="filterArtists(item)"
+        >
+          {{ item.name }}
+        </button>
+      </li>
+    </ul>
+    <div class="m-4 text-center">
       {{ user.display_name }}
     </div>
   </div>
@@ -20,11 +26,12 @@ import { inject } from 'vue';
 
 export default {
   setup() {
-    const { user, authenticate } = inject('spotifyApi');
+    const { user, recentlyPlayedArtists, filterArtists } = inject('spotifyApi');
 
     return {
       user,
-      authenticate,
+      recentlyPlayedArtists,
+      filterArtists,
     }
   },
 };

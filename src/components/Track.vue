@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2 bg-gray-50 rounded shadow">
+  <div class="p-4 bg-gray-50 rounded">
     <div class="truncate font-medium text-lg mb-2">
       {{ track.name }}
     </div>

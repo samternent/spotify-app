@@ -1,3 +1,4 @@
+// This logic is mostly taken from Spotify Docs
 import { ref } from 'vue';
 
 const client_id = '34bc1dd5df3042d4aaec71f15c9eb6c3';

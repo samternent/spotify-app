@@ -35,7 +35,13 @@ export default {
     Track,
   },
   setup() {
-    const { fetchRecentlyPlayedItems, recentlyPlayedItems, filterArtist, filterArtists } = inject('spotifyApi');
+    const {
+      fetchRecentlyPlayedItems,
+      recentlyPlayedItems,
+      filterArtist,
+      filterArtists,
+    } = inject('spotifyApi');
+    
     const loadMoreEl = ref(null);
 
     useIntersectionObserver(

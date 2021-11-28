@@ -26,7 +26,11 @@ import { inject } from 'vue';
 
 export default {
   setup() {
-    const { user, recentlyPlayedArtists, filterArtists } = inject('spotifyApi');
+    const {
+      user,
+      recentlyPlayedArtists,
+      filterArtists,
+    } = inject('spotifyApi');
 
     return {
       user,

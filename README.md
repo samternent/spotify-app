@@ -1,7 +1,22 @@
-# Vue 3 + Vite
+# Spotify App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+App to display recently played Spotify tracks with artsist filter.
 
-## Recommended IDE Setup
+## Tech 
+- Vite
+- Vue 3
+- Tailwind - JIT mode
+- @vueuse/core
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## Running loclly
+```
+npm i && npm run dev
+```
+
+## Follow up Work
+- Add Unit Tests
+  - Jest integration included, not tests.
+    - It would be worth testing the computed properties in the `useSpotifyApi` composable.
+    - This will require mocking the Spotify endpoints and ensuring edge cases with artists return the correct format.
+- Better component Structure
+  - Furher abstractions on components could be made

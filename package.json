@@ -1,5 +1,5 @@
 {
-  "name": "spotify-api",
+  "name": "spotify-app",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

@@ -9,7 +9,8 @@
         :key="item.id"
       >
         <button
-          class="bg-gray-50 py-1 px-4 my-1 rounded-full"
+          class="py-1 px-4 my-1 rounded-full"
+          :class="filterArtist?.id === item.id ? 'bg-green-100' : 'bg-gray-50'"
           @click="filterArtists(item)"
         >
           {{ item.name }}
@@ -30,12 +31,14 @@ export default {
       user,
       recentlyPlayedArtists,
       filterArtists,
+      filterArtist,
     } = inject('spotifyApi');
 
     return {
       user,
       recentlyPlayedArtists,
       filterArtists,
+      filterArtist,
     }
   },
 };

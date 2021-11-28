@@ -2,7 +2,9 @@
 import { ref } from 'vue';
 
 const client_id = '34bc1dd5df3042d4aaec71f15c9eb6c3';
-const redirect_uri = 'http://localhost:3000';
+const redirect_uri = import.meta.env.PROD
+  ? 'https://spotify.ternent.dev'
+  : 'http://localhost:3000';
 const scope = 'user-read-currently-playing user-read-recently-played'
 
 export default () => {

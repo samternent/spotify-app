@@ -22,7 +22,7 @@
       />
     </div>
 
-    <div ref="loadMoreEl" />
+    <div ref="loadMoreEl" class="h-2" />
   </div>
 </template>
 <script>
